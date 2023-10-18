@@ -1,30 +1,30 @@
 CREATE TABLE Ladu (
-    LaduId INT PRIMARY KEY,
+    LaduId INT PRIMARY KEY IDENTITY(1,1),
     Nimetus NVARCHAR(50),
     Aadress NVARCHAR(50)
 );
 
 CREATE TABLE Kategooria (
-    KategooriaId INT PRIMARY KEY,
+    KategooriaId INT PRIMARY KEY IDENTITY(1,1),
     Nimi NVARCHAR(50)
 );
 
 CREATE TABLE Tootaja (
-    TootajaId INT PRIMARY KEY,
+    TootajaId INT PRIMARY KEY IDENTITY(1,1),
     Nimi NVARCHAR(50),
     Aadress NVARCHAR(50),
     KontaktTelefon NVARCHAR(50)
 );
 
 CREATE TABLE Maksuviis (
-    MaksuviisId INT PRIMARY KEY,
+    MaksuviisId INT PRIMARY KEY IDENTITY(1,1),
     Nimetus NVARCHAR(50),
     Kirjeldus NVARCHAR(255)
 );
 
 
 CREATE TABLE Klient (
-    KlientId INT PRIMARY KEY,
+    KlientId INT PRIMARY KEY IDENTITY(1,1),
     Eesnimi NVARCHAR(50),
     Perenimi NVARCHAR(50),
     Aadress NVARCHAR(50),
@@ -32,7 +32,7 @@ CREATE TABLE Klient (
 	CONSTRAINT FK_Maksuviis_Klient FOREIGN KEY (MaksuviisId) REFERENCES Maksuviis(MaksuviisId)
 );
 CREATE TABLE Ladustamine (
-    LadustamineId INT PRIMARY KEY,
+    LadustamineId INT PRIMARY KEY IDENTITY(1,1),
     LaduId INT,
     TootajaId INT,
     Kuupaev DATE,
@@ -40,7 +40,7 @@ CREATE TABLE Ladustamine (
     CONSTRAINT FK_Ladustamine_Tootaja FOREIGN KEY (TootajaId) REFERENCES Tootaja(TootajaId)
 );
 CREATE TABLE Toode (
-    ToodeId INT PRIMARY KEY,
+    ToodeId INT PRIMARY KEY IDENTITY(1,1),
     Nimi NVARCHAR(50),
     Kirjeldus NVARCHAR(MAX),
     Hind DECIMAL(10, 2),
@@ -51,7 +51,7 @@ CREATE TABLE Toode (
 );
 
 CREATE TABLE Tellimus (
-    TellimusId INT PRIMARY KEY,
+    TellimusId INT PRIMARY KEY IDENTITY(1,1),
     KlientId INT,
     TellimusKuupaev DATE,
     CONSTRAINT FK_Tellimus_Klient FOREIGN KEY (KlientId) REFERENCES Klient(KlientId)
@@ -59,7 +59,7 @@ CREATE TABLE Tellimus (
 
 
 CREATE TABLE TellitudToode (
-    TellitudToodeId INT PRIMARY KEY,
+    TellitudToodeId INT PRIMARY KEY IDENTITY(1,1),
     TellimusId INT,
     ToodeId INT,
     Kogus INT,
@@ -70,7 +70,7 @@ CREATE TABLE TellitudToode (
 );
 
 CREATE TABLE Tagasiside (
-    TagasisideId INT PRIMARY KEY,
+    TagasisideId INT PRIMARY KEY IDENTITY(1,1),
     ToodeId INT,
     KlientId INT,
     Hinnang INT,
