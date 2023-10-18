@@ -31,6 +31,14 @@ CREATE TABLE Klient (
     MaksuviisId INT
 	CONSTRAINT FK_Maksuviis_Klient FOREIGN KEY (MaksuviisId) REFERENCES Maksuviis(MaksuviisId)
 );
+CREATE TABLE Ladustamine (
+    LadustamineId INT PRIMARY KEY,
+    LaduId INT,
+    TootajaId INT,
+    Kuupaev DATE,
+    CONSTRAINT FK_Ladustamine_Ladu FOREIGN KEY (LaduId) REFERENCES Ladu(LaduId),
+    CONSTRAINT FK_Ladustamine_Tootaja FOREIGN KEY (TootajaId) REFERENCES Tootaja(TootajaId)
+);
 CREATE TABLE Toode (
     ToodeId INT PRIMARY KEY,
     Nimi NVARCHAR(50),
@@ -38,7 +46,7 @@ CREATE TABLE Toode (
     Hind DECIMAL(10, 2),
     KategooriaId INT,
     LadustamineId INT,
-    CONSTRAINT FK_Toode_Kategooria FOREIGN KEY (KategooriaId) REFERENCES Kategooria(KategooriaId)
+    CONSTRAINT FK_Toode_Kategooria FOREIGN KEY (KategooriaId) REFERENCES Kategooria(KategooriaId),
 	CONSTRAINT FK_Toode_Ladustamine FOREIGN KEY (LadustamineId) REFERENCES Ladustamine(LadustamineId)
 );
 
@@ -59,15 +67,6 @@ CREATE TABLE TellitudToode (
     Allahindlus DECIMAL(5, 2),
     CONSTRAINT FK_TellitudToode_Tellimus FOREIGN KEY (TellimusId) REFERENCES Tellimus(TellimusId),
     CONSTRAINT FK_TellitudToode_Toode FOREIGN KEY (ToodeId) REFERENCES Toode(ToodeId)
-);
-
-CREATE TABLE Ladustamine (
-    LadustamineId INT PRIMARY KEY,
-    LaduId INT,
-    TootajaId INT,
-    Kuupaev DATE,
-    CONSTRAINT FK_Ladustamine_Ladu FOREIGN KEY (LaduId) REFERENCES Ladu(LaduId),
-    CONSTRAINT FK_Ladustamine_Tootaja FOREIGN KEY (TootajaId) REFERENCES Tootaja(TootajaId)
 );
 
 CREATE TABLE Tagasiside (
