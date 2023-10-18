@@ -1,13 +1,13 @@
 INSERT INTO Klient (Eesnimi, Perenimi, Aadress, MaksuviisId)
 VALUES
-    ('Алексей', 'Иванов', 'Адрес клиента 1', 1),
-    ('Наталья', 'Петрова', 'Адрес клиента 2', 2),
-    ('Владимир', 'Смирнов', 'Адрес клиента 3', 3),
-    ('Елена', 'Сидорова', 'Адрес клиента 4', 4),
-    ('Сергей', 'Михайлов', 'Адрес клиента 5', 5),
-    ('Ольга', 'Кузнецова', 'Адрес клиента 6', 6),
-    ('Дмитрий', 'Николаев', 'Адрес клиента 7', 7),
-    ('Мария', 'Попова', 'Адрес клиента 8', 8),
-    ('Андрей', 'Федоров', 'Адрес клиента 9', 9),
-    ('Людмила', 'Соловьева', 'Адрес клиента 10', 10);
+    ('Alexei', 'Ivanov', 'Kliendi aadress 1', 1),
+    ('Natalia', 'Petrova', 'Kliendi aadress 2', 2),
+    ('Vladimir', 'Smirnov', 'Kliendi aadress 3', 3),
+    ('Elena', 'Sidorova', 'kliendi aadress 4', 4),
+    ('Sergei', 'Mihhailov', 'kliendi aadress 5', 5),
+    ('Olga', 'Kuznetsova', 'Kliendi aadress 6', 6),
+    ('Dmitri', 'Nikolajev', 'kliendi aadress 7', 7),
+    ('Maria', 'Popova', 'Kliendi aadress 8', 8),
+    ('Andrey', 'Fedorov', 'Kliendi aadress 9', 9),
+    ('Ljudmila', 'Solovjova', 'Kliendi aadress 10', 10);
 
