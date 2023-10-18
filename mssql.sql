@@ -39,6 +39,7 @@ CREATE TABLE Toode (
     KategooriaId INT,
     LadustamineId INT,
     CONSTRAINT FK_Toode_Kategooria FOREIGN KEY (KategooriaId) REFERENCES Kategooria(KategooriaId)
+	CONSTRAINT FK_Toode_Ladustamine FOREIGN KEY (LadustamineId) REFERENCES Ladustamine(LadustamineId)
 );
 
 CREATE TABLE Tellimus (
