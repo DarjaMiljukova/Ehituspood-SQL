@@ -125,7 +125,7 @@ VALUES
     (4, 4, 2, 'Rahulolev', '2023-10-04'),
     (5, 5, 5, 'Suurepärane toode', '2023-10-05'),
     (6, 6, 2, 'Ma ei ole muljet avaldanud', '2023-10-06'),
-    (7, 7, 5, 'See on suurepärane!', '2023-10-07')
+    (7, 7, 5, 'See on suurepärane!', '2023-10-07'),
 	(8, 8, 1, 'Nice', '2023-11-05'),
     (9, 9, 2, 'Nii ja naa', '2023-11-06'),
-    (10, 10, 3, 'Rahulolev', '2023-11-07')
+    (10, 10, 3, 'Rahulolev', '2023-11-07');
