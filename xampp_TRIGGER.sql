@@ -6,6 +6,12 @@ USER()
 FROM Toode AS t
 INNER JOIN Kategooria AS k ON t.KategooriaId = k.KategooriaId
 WHERE t.ToodeId = NEW.ToodeId
+--kontroll
+SELECT * FROM Toode;
+INSERT INTO Toode (Nimi, Kirjeldus, Hind, KategooriaId, LadustamineId)
+VALUES('haamer', 'haamer', 51.00, 1, 1);
+SELECT * FROM Toode;
+SELECT * FROM logi;
 
 
 
